@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alex Carter | Developer</title>
+    <title>Hossein Khosravian | Developer</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="{% static 'images/hossein.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -17,7 +21,7 @@
     <header>
         <nav class="navbar">
 
-            <a href="#home" class="logo">AC<span>.</span></a>
+            <a href="#home" class="logo">HK<span>.</span></a>
 
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -40,7 +44,7 @@
 
         <div class="home-text">
 
-            <p class="small-title">FULL-STACK DEVELOPER</p>
+            <p class="small-title">BEGINNER FULL-STACK DEVELOPER</p>
 
             <h1>
                 Building
@@ -50,7 +54,7 @@
             </h1>
 
             <p class="description">
-                Hi, I'm Alex Carter. I create clean and responsive
+                Hi, I'm Hossein Khosravian. I create clean and responsive
                 websites and web applications with a focus on
                 good design and reliable code.
             </p>
@@ -72,11 +76,11 @@
 
         <div class="profile">
 
-            <div class="profile-picture">
-                AC
-            </div>
+        <div class="profile-picture">
+        <img src="{% static 'images/hossein.jpg' %}" alt="Hossein Khosravian">
+        </div>
 
-            <h3>Alex Carter</h3>
+            <h3>Hossein Khosravian</h3>
 
             <p>Full-Stack Developer</p>
 
@@ -91,7 +95,7 @@
 
     <section id="about" class="section">
 
-        <p class="small-title">01 — ABOUT ME</p>
+        <p class="small-title">ABOUT ME</p>
 
         <h2>A little about me.</h2>
 
@@ -100,7 +104,7 @@
             <div class="about-main">
 
                 <p>
-                    I'm Alex, a full-stack developer who enjoys
+                    I'm Hossein, a full-stack developer who enjoys
                     turning ideas into useful and beautiful
                     digital products.
                 </p>
@@ -119,7 +123,7 @@
 
                     <p>
                         <strong>Location</strong>
-                        New York, USA
+                        IRAN, KERMAN
                     </p>
 
                     <p>
@@ -128,8 +132,8 @@
                     </p>
 
                     <p>
-                        <strong>Experience</strong>
-                        3+ Years
+                        <strong>Learning</strong>
+                        5+ Months
                     </p>
 
                 </div>
@@ -145,7 +149,7 @@
 
     <section id="skills" class="section">
 
-        <p class="small-title">02 — SKILLS</p>
+        <p class="small-title">SKILLS</p>
 
         <h2>What I work with.</h2>
 
@@ -215,7 +219,7 @@
 
     <section id="projects" class="section">
 
-        <p class="small-title">03 — PROJECTS</p>
+        <p class="small-title">PROJECTS</p>
 
         <h2>Some of my work.</h2>
 
@@ -231,14 +235,16 @@
                 <div class="project-text">
 
                     <p class="project-type">
-                        DJANGO · WEB APP
+                        This Website
                     </p>
 
-                    <h3>TaskFlow</h3>
+                    <h3>Resume</h3>
 
                     <p>
-                        A simple productivity website
-                        for managing daily tasks.
+                        <p>
+                            A portfolio website built with HTML, CSS and Django
+                            to showcase my skills and projects.
+                        </p>
                     </p>
 
                     <a href="#">View Project ↗</a>
@@ -257,17 +263,16 @@
                 <div class="project-text">
 
                     <p class="project-type">
-                        HTML · CSS
+                        COMING UP
                     </p>
 
-                    <h3>North Studio</h3>
+                    <h3>COMING SOON</h3>
 
                     <p>
-                        A modern portfolio website
-                        for a creative studio.
+                        ...
                     </p>
 
-                    <a href="#">View Project ↗</a>
+                    <a href="">View Project ↗</a>
 
                 </div>
 
@@ -283,14 +288,13 @@
                 <div class="project-text">
 
                     <p class="project-type">
-                        PYTHON · DJANGO
+                        COMING UP
                     </p>
 
-                    <h3>BookNest</h3>
+                    <h3>COMING SOON</h3>
 
                     <p>
-                        An online library website
-                        with books and categories.
+                        ...
                     </p>
 
                     <a href="#">View Project ↗</a>
@@ -308,25 +312,25 @@
 
     <section id="stats" class="section">
 
-        <p class="small-title">04 — MY STATS</p>
+        <p class="small-title">MY STATS</p>
 
         <h2>My progress so far.</h2>
 
         <div class="stats">
 
             <div>
-                <strong>24+</strong>
+                <strong>1</strong>
                 <p>Projects</p>
             </div>
 
             <div>
-                <strong>12</strong>
+                <strong>4</strong>
                 <p>Technologies</p>
             </div>
 
             <div>
-                <strong>3+</strong>
-                <p>Years Learning</p>
+                <strong>5+</strong>
+                <p>Months Learning</p>
             </div>
 
             <div>
@@ -345,30 +349,26 @@
 
         <div class="contact-text">
 
-            <p class="small-title">05 — CONTACT ME</p>
+            <p class="small-title">CONTACT ME</p>
 
             <h2>
                 Have a project
                 in mind?
             </h2>
 
-            <p>
-                These are fictional details.
-                Replace them with your own information later.
-            </p>
 
             <div class="contact-links">
 
-                <a href="mailto:alex@example.com">
-                    📧 alex@example.com
+                <a href="mailto:hossseinkhosravi19@gmail.com">
+                    📧 hossseinkhosravi19@gmail.com
                 </a>
 
-                <a href="tel:+15550000000">
-                    📱 +1 (555) 000-0000
+                <a href="tel:+98910000000">
+                    📱 No Phone Number For Now.
                 </a>
 
-                <a href="https://instagram.com/alex.carter.dev">
-                    📸 @alex.carter.dev
+                <a href="<a href="https://instagram.com/hossein_khosravi">">
+                    📸 @hossein_khosravi
                 </a>
 
             </div>
@@ -425,11 +425,11 @@
     <footer>
 
         <a href="#home" class="logo">
-            AC<span>.</span>
+            HK<span>.</span>
         </a>
 
         <p>
-            © 2026 Alex Carter. All rights reserved.
+            © 2026 Hossein Khosravian.
         </p>
 
         <a href="#home">
