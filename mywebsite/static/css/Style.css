@@ -23,7 +23,6 @@ a {
 }
 
 
-/* Navbar */
 
 header {
     position: sticky;
@@ -88,7 +87,6 @@ header {
 }
 
 
-/* Home */
 
 .home {
     min-height: 90vh;
@@ -148,7 +146,6 @@ header {
 }
 
 
-/* Buttons */
 
 .buttons {
     display: flex;
@@ -194,7 +191,6 @@ header {
 }
 
 
-/* Profile */
 
 .profile {
     width: 280px;
@@ -245,7 +241,6 @@ header {
 }
 
 
-/* Sections */
 
 .section {
     padding: 100px 7%;
@@ -262,7 +257,6 @@ header {
 }
 
 
-/* About */
 
 .about {
     display: flex;
@@ -301,7 +295,6 @@ header {
 }
 
 
-/* Skills */
 
 .skills {
     display: grid;
@@ -351,7 +344,6 @@ header {
 }
 
 
-/* Projects */
 
 .projects {
     display: grid;
@@ -457,7 +449,6 @@ header {
 }
 
 
-/* Stats */
 
 .stats {
     display: grid;
@@ -491,7 +482,6 @@ header {
 }
 
 
-/* Contact */
 
 .contact {
     display: grid;
@@ -530,7 +520,6 @@ header {
 }
 
 
-/* Form */
 
 form {
     display: flex;
@@ -577,7 +566,6 @@ textarea {
 }
 
 
-/* Footer */
 
 footer {
     padding: 28px 7%;
@@ -600,7 +588,6 @@ footer a:hover {
 }
 
 
-/* Responsive */
 
 @media (max-width: 900px) {
 
