@@ -1,4 +1,15 @@
-body{text-align: center;
-    text-decoration-color: #1e2640;}
+body{
+    background-color: #dc9750;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;}
 
-body{background-color: #dc9750;}
+.error-box{
+    background-color: #1e2640;
+    padding: 30px;
+    border-radius: 15px;}
+
+.error-box h1,
+.error-box h2{color: #f8f7fa;}
