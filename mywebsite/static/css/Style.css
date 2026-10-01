@@ -481,12 +481,11 @@ header {
 
 .send-button{
     background-color:#fdba8c;
-
     padding: 5px 6px;
-
     border-radius: 10px;
-
-    border: 1px solid #3b304a;}
+    border: 1px solid #3b304a;
+    align-self: flex-start;
+}
 
 .send-button:hover {
     transform: translateY(-3px);
