@@ -21,7 +21,10 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["real-web-project.onrender.com"]
+ALLOWED_HOSTS = ["real-web-project.onrender.com",
+                 "hosseinkhosravian.ir",
+                  "www.hosseinkhosravian.ir",
+]
 
 
 INSTALLED_APPS = [
