@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f1e8;
-    color: #211d19;
+    background-color: #cd9b56;
+    color: #2b2520;
     line-height: 1.7;
     direction: rtl;
 }
@@ -220,7 +220,7 @@ header {
 
     padding: 30px;
 
-    background-color: #fffaf4;
+    background-color: #F3EADF;
 
     border: 1px solid #e2d5c6;
     border-radius: 20px;
