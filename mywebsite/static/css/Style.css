@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #cd9b56;
-    color: #2b2520;
+    background-color: #171412;
+    color: #F5F1EC;
     line-height: 1.7;
     direction: rtl;
 }
@@ -37,9 +37,9 @@ header {
     align-items: center;
     padding: 18px 7%;
 
-    background-color: rgba(247, 241, 232, 0.92);
+    background-color: rgba(29, 25, 22, 0.92);
 
-    border-bottom: 1px solid #e2d7c9;
+    border-bottom: 1px solid #3A3028;
 
     backdrop-filter: blur(12px);
 }
@@ -47,11 +47,11 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #211d19;
+    color: #F5F1EC;
 }
 
 .logo span {
-    color: #e9782f;
+    color: #FF7A00;
 }
 
 .nav-links {
@@ -60,13 +60,13 @@ header {
 }
 
 .nav-links a {
-    color: #6d655d;
+    color: #A8A19A;
     font-size: 14px;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #e9782f;
+    color: #FF7A00;
 }
 
 .talk-button {
@@ -74,10 +74,10 @@ header {
 
     padding: 9px 17px;
 
-    background-color: #e9782f;
+    background-color: #FF7A00;
     color: #ffffff;
 
-    border: 1px solid #e9782f;
+    border: 1px solid #FF7A00;
     border-radius: 20px;
 
     font-size: 13px;
@@ -87,8 +87,8 @@ header {
 }
 
 .talk-button:hover {
-    background-color: #d96620;
-    border-color: #d96620;
+    background-color: #B85C00;
+    border-color: #B85C00;
     transform: translateY(-2px);
 }
 
@@ -109,7 +109,7 @@ header {
     background:
         radial-gradient(
             circle at 85% 25%,
-            rgba(233, 120, 47, 0.10),
+            rgba(255, 122, 0, 0.10),
             transparent 28%
         );
 }
@@ -120,7 +120,7 @@ header {
 }
 
 .small-title {
-    color: #e9782f;
+    color: #FF7A00;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -134,18 +134,18 @@ header {
 }
 
 .home h1 span {
-    color: #e9782f;
+    color: #FF7A00;
 }
 
 .description {
-    color: #6d655d;
+    color: #A8A19A;
     max-width: 620px;
     margin: 30px 0;
     font-size: 16px;
 }
 
 .description b {
-    color: #3b342d;
+    color: #F5F1EC;
 }
 
 /* =========================
@@ -181,31 +181,31 @@ header {
 }
 
 .main-button {
-    background-color: #e9782f;
+    background-color: #FF7A00;
     color: #ffffff;
 
-    border: 1px solid #e9782f;
+    border: 1px solid #FF7A00;
 }
 
 .main-button:hover {
-    background-color: #d96620;
-    border-color: #d96620;
+    background-color: #B85C00;
+    border-color: #B85C00;
 
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 30px rgba(233, 120, 47, 0.20);
+    box-shadow: 0 10px 30px rgba(255, 122, 0, 0.20);
 }
 
 .second-button {
-    background-color: #fffaf4;
-    color: #403931;
+    background-color: #241E1A;
+    color: #F5F1EC;
 
-    border: 1px solid #ddcfbf;
+    border: 1px solid #3A3028;
 }
 
 .second-button:hover {
-    border-color: #e9782f;
-    color: #e9782f;
+    border-color: #FF7A00;
+    color: #FF7A00;
 
     transform: translateY(-3px);
 }
@@ -220,14 +220,14 @@ header {
 
     padding: 30px;
 
-    background-color: #F3EADF;
+    background-color: #241E1A;
 
-    border: 1px solid #e2d5c6;
+    border: 1px solid #3A3028;
     border-radius: 20px;
 
     text-align: right;
 
-    box-shadow: 0 15px 40px rgba(74, 51, 29, 0.07);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 
     transition: 0.3s;
 }
@@ -235,7 +235,7 @@ header {
 .profile:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 20px 45px rgba(74, 51, 29, 0.11);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
 .profile-picture {
@@ -247,7 +247,7 @@ header {
 
     margin-bottom: 20px;
 
-    border: 3px solid #f0dfcf;
+    border: 3px solid #3A3028;
 }
 
 .profile-picture img {
@@ -262,7 +262,7 @@ header {
 }
 
 .profile p {
-    color: #6d655d;
+    color: #A8A19A;
 }
 
 .profile span {
@@ -270,7 +270,7 @@ header {
 
     margin-top: 4px;
 
-    color: #e9782f;
+    color: #FF7A00;
 
     font-size: 13px;
     font-weight: bold;
@@ -283,7 +283,7 @@ header {
 .section {
     padding: 100px 7%;
 
-    border-top: 1px solid #e7ddd1;
+    border-top: 1px solid #3A3028;
 }
 
 .section h2 {
@@ -306,12 +306,12 @@ header {
     flex: 1;
 
     font-size: 22px;
-    color: #302922;
+    color: #F5F1EC;
 }
 
 .about-info {
     flex: 1;
-    color: #6d655d;
+    color: #A8A19A;
 }
 
 .info {
@@ -321,14 +321,14 @@ header {
 .info p {
     padding: 12px 0;
 
-    border-bottom: 1px solid #e2d8cc;
+    border-bottom: 1px solid #3A3028;
 }
 
 .info strong {
     display: inline-block;
     width: 110px;
 
-    color: #2e2822;
+    color: #F5F1EC;
 }
 
 /* =========================
@@ -345,9 +345,9 @@ header {
 .skill {
     padding: 28px;
 
-    background-color: #fffaf4;
+    background-color: #241E1A;
 
-    border: 1px solid #e2d5c6;
+    border: 1px solid #3A3028;
     border-radius: 16px;
 
     transition: 0.3s;
@@ -356,13 +356,13 @@ header {
 .skill:hover {
     transform: translateY(-6px);
 
-    border-color: #e9782f;
+    border-color: #FF7A00;
 
-    box-shadow: 0 15px 35px rgba(74, 51, 29, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .skill span {
-    color: #e9782f;
+    color: #FF7A00;
 
     font-size: 12px;
     font-weight: bold;
@@ -375,7 +375,7 @@ header {
 }
 
 .skill p {
-    color: #6d655d;
+    color: #A8A19A;
 
     font-size: 14px;
 }
@@ -394,9 +394,9 @@ header {
 .project {
     overflow: hidden;
 
-    background-color: #fffaf4;
+    background-color: #241E1A;
 
-    border: 1px solid #e2d5c6;
+    border: 1px solid #3A3028;
     border-radius: 16px;
 
     transition: 0.3s;
@@ -405,7 +405,7 @@ header {
 .project:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 15px 35px rgba(74, 51, 29, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .project-image {
@@ -422,8 +422,8 @@ header {
 .purple {
     background: linear-gradient(
         135deg,
-        #f0c7a6,
-        #e9782f
+        #5A2A00,
+        #FF7A00
     );
 
     color: #ffffff;
@@ -432,8 +432,8 @@ header {
 .orange {
     background: linear-gradient(
         135deg,
-        #f5d2b4,
-        #f09a5a
+        #7A3200,
+        #FF8A1F
     );
 
     color: #ffffff;
@@ -442,8 +442,8 @@ header {
 .dark {
     background: linear-gradient(
         135deg,
-        #3f352d,
-        #211d19
+        #2A211C,
+        #171412
     );
 
     color: #ffffff;
@@ -454,7 +454,7 @@ header {
 }
 
 .project-type {
-    color: #e9782f;
+    color: #FF7A00;
 
     font-size: 11px;
     font-weight: bold;
@@ -467,7 +467,7 @@ header {
 }
 
 .project-text > p:not(.project-type) {
-    color: #6d655d;
+    color: #A8A19A;
 
     font-size: 14px;
 }
@@ -477,14 +477,14 @@ header {
 
     margin-top: 18px;
 
-    color: #e9782f;
+    color: #FF7A00;
 
     font-size: 13px;
     font-weight: bold;
 }
 
 .project-text a:hover {
-    color: #c95d18;
+    color: #B85C00;
 }
 
 /* =========================
@@ -495,11 +495,11 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    border: 1px solid #e2d5c6;
+    border: 1px solid #3A3028;
     border-radius: 14px;
     overflow: hidden;
 
-    background-color: #fffaf4;
+    background-color: #241E1A;
 }
 
 .stats div {
@@ -507,7 +507,7 @@ header {
 
     text-align: right;
 
-    border-left: 1px solid #e2d5c6;
+    border-left: 1px solid #3A3028;
 }
 
 .stats div:first-child {
@@ -521,7 +521,7 @@ header {
 .stats strong {
     display: block;
 
-    color: #e9782f;
+    color: #FF7A00;
 
     font-size: 42px;
 
@@ -531,7 +531,7 @@ header {
 .stats p {
     margin-top: 8px;
 
-    color: #6d655d;
+    color: #A8A19A;
 }
 
 /* =========================
@@ -551,7 +551,7 @@ header {
 }
 
 .contact-text > p:not(.small-title) {
-    color: #6d655d;
+    color: #A8A19A;
 }
 
 .contact-links {
@@ -567,13 +567,13 @@ header {
 }
 
 .contact-links a {
-    color: #e9782f;
+    color: #FF7A00;
 
     transition: 0.3s;
 }
 
 .contact-links a:hover {
-    color: #c95d18;
+    color: #B85C00;
 
     transform: translateX(-3px);
 }
@@ -591,7 +591,7 @@ form {
 }
 
 label {
-    color: #6d655d;
+    color: #A8A19A;
 
     font-size: 13px;
 }
@@ -604,11 +604,11 @@ textarea {
 
     padding: 13px;
 
-    background-color: #fffaf4;
+    background-color: #241E1A;
 
-    color: #211d19;
+    color: #F5F1EC;
 
-    border: 1px solid #ddcfbf;
+    border: 1px solid #3A3028;
 
     border-radius: 9px;
 
@@ -621,14 +621,14 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: #aaa096;
+    color: #6F665E;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #e9782f;
+    border-color: #FF7A00;
 
-    box-shadow: 0 0 0 3px rgba(233, 120, 47, 0.10);
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.10);
 }
 
 textarea {
@@ -648,10 +648,10 @@ textarea {
 
     padding: 10px 18px;
 
-    background-color: #e9782f;
+    background-color: #FF7A00;
     color: #ffffff;
 
-    border: 1px solid #e9782f;
+    border: 1px solid #FF7A00;
     border-radius: 10px;
 
     font-weight: bold;
@@ -660,12 +660,12 @@ textarea {
 }
 
 .send-button:hover {
-    background-color: #d96620;
-    border-color: #d96620;
+    background-color: #B85C00;
+    border-color: #B85C00;
 
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 25px rgba(233, 120, 47, 0.18);
+    box-shadow: 0 10px 25px rgba(255, 122, 0, 0.18);
 }
 
 /* =========================
@@ -675,21 +675,21 @@ textarea {
 footer {
     padding: 28px 7%;
 
-    border-top: 1px solid #e2d7c9;
+    border-top: 1px solid #3A3028;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    color: #6d655d;
+    color: #A8A19A;
 
     font-size: 13px;
 
-    background-color: #f2eadf;
+    background-color: #1D1916;
 }
 
 footer a:hover {
-    color: #e9782f;
+    color: #FF7A00;
 }
 
 /* =========================
@@ -740,8 +740,8 @@ footer a:hover {
     }
 
     .stats div {
-        border-left: 1px solid #e2d5c6;
-        border-bottom: 1px solid #e2d5c6;
+        border-left: 1px solid #3A3028;
+        border-bottom: 1px solid #3A3028;
     }
 
     .stats div:nth-child(2) {
@@ -815,7 +815,7 @@ footer a:hover {
     .stats div:nth-child(3),
     .stats div:nth-child(4) {
         border-left: none;
-        border-bottom: 1px solid #e2d5c6;
+        border-bottom: 1px solid #3A3028;
     }
 
     .stats div:last-child {
