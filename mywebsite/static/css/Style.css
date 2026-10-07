@@ -442,6 +442,12 @@ header {
     gap: 15px;
 }
 
+.projects > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .project {
     overflow: hidden;
 
