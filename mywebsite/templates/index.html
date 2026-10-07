@@ -516,16 +516,12 @@
 
             </div>
 
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <form id="contact-form" action="{% url 'contact' %}" method="POST">
 
-                <input type="hidden" name="access_key" value="7c8e7ca3-2fdc-4e71-b8ec-702834d20e1a">
-
-                <input type="hidden" name="redirect" value="https://hosseinkhosravian.ir/success/">
+                {% csrf_token %}
 
                 <label>
-
                     نام
-
                     <input
                         type="text"
                         name="name"
@@ -533,13 +529,10 @@
                         autocomplete="name"
                         required
                     >
-
                 </label>
 
                 <label>
-
                     ایمیل
-
                     <input
                         type="email"
                         name="email"
@@ -547,20 +540,16 @@
                         autocomplete="email"
                         required
                     >
-
                 </label>
 
                 <label>
-
                     پیام
-
                     <textarea
                         name="message"
                         rows="6"
                         placeholder="Write your message..."
                         required
                     ></textarea>
-
                 </label>
 
                 <button class="send-button" type="submit">
