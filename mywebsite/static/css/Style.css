@@ -443,7 +443,7 @@ header {
 }
 
 .projects > a {
-    display: block;
+    display: block; 
     color: inherit;
     text-decoration: none;
 }
@@ -534,7 +534,7 @@ header {
     font-size: 14px;
 }
 
-.project-text a {
+.project-text span {
     display: inline-block;
 
     margin-top: 18px;
@@ -546,7 +546,7 @@ header {
     font-weight: bold;
 }
 
-.project-text a:hover {
+.project-text span:hover {
     color: #B85C00;
 }
 
