@@ -516,7 +516,9 @@
 
             </div>
 
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="7c8e7ca3-2fdc-4e71-b8ec-702834d20e1a">
 
                 <label>
 
@@ -527,6 +529,7 @@
                         name="name"
                         placeholder="Your name"
                         autocomplete="name"
+                        required
                     >
 
                 </label>
@@ -540,6 +543,7 @@
                         name="email"
                         placeholder="Your email"
                         autocomplete="email"
+                        required
                     >
 
                 </label>
@@ -552,13 +556,14 @@
                         name="message"
                         rows="6"
                         placeholder="Write your message..."
+                        required
                     ></textarea>
 
                 </label>
 
-                <a class="send-button" href="{% url 'error' %}" target="_blank">
+                <button class="send-button" type="submit">
                     ارسال پیام ↗
-                </a>
+                </button>
 
             </form>
 
