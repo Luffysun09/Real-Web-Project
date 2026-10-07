@@ -6,10 +6,10 @@ body{
     min-height: 100vh;
     flex-direction: column;}
 
-.error-box{
+.success-box{
     background-color: #1e2640;
     padding: 30px;
     border-radius: 15px;}
 
-.error-box h1,
-.error-box h2{color: #f8f7fa;}
+.success-box h1,
+.success-box h2{color: #f8f7fa;}

@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Successfuly Sent</title>
+        <link rel="stylesheet" href="{% static 'css/success.css' %}">
+        <link rel="icon" type="image/svg+xml" href="{% static 'images/correct.png' %}">
+    </head>
+
+    <body>
+
+        <div class="success-box">
+            <h1>پیام شما با موفقیت ثبت گردید</h1>
+            <h2><b>ممنون بابت نقدتون.</b></h2>
+        </div>
+
+        <a href="{% url 'home' %}" class="back-button">بازگشت به سایت</a>
+
+    </body>
+
+</html>
