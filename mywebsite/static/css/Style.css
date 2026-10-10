@@ -27,9 +27,8 @@ header {
     z-index: 100;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+
+
 
 .navbar {
     display: grid;
@@ -45,7 +44,8 @@ header {
     backdrop-filter: blur(12px);
 }
 
-/* LOGO */
+
+
 
 .logo {
     justify-self: start;
@@ -60,7 +60,10 @@ header {
     color: #FF7A00;
 }
 
-/* NAV LINKS */
+
+
+
+
 
 .nav-links {
     display: flex;
@@ -83,7 +86,10 @@ header {
     color: #FF7A00;
 }
 
-/* CONTACT BUTTON */
+
+
+
+
 
 .talk-button {
     justify-self: end;
@@ -109,9 +115,10 @@ header {
     transform: translateY(-2px);
 }
 
-/* =========================
-   HOME
-========================= */
+
+
+
+
 
 .home {
     min-height: 90vh;
@@ -176,9 +183,10 @@ header {
     color: #F5F1EC;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+
+
+
+
 
 .buttons {
     width: 100%;
@@ -245,9 +253,41 @@ header {
     transform: translateY(-3px);
 }
 
-/* =========================
-   PROFILE
-========================= */
+.resume-buttons{
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #171412;
+    color: #F5F1EC;
+    text-decoration: none;
+
+    border: 1px solid #3A3028;
+    border-radius: 10px;
+
+    padding: 12px 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.resume-button:hover{
+    border-color: #FF7A00;
+    color: #FF7A00;
+    transform: translateY(-3px)
+}
+
+
+
+
+
 
 .profile {
     width: 280px;
@@ -317,9 +357,10 @@ header {
     font-weight: bold;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+
+
+
+
 
 .section {
     padding: 100px 7%;
@@ -335,9 +376,10 @@ header {
     margin-bottom: 45px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
+
+
+
 
 .about {
     display: flex;
@@ -377,9 +419,10 @@ header {
     color: #F5F1EC;
 }
 
-/* =========================
-   SKILLS
-========================= */
+
+
+
+
 
 .skills {
     display: grid;
@@ -430,9 +473,10 @@ header {
     font-size: 14px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+
+
+
+
 
 .projects {
     display: grid;
@@ -550,9 +594,10 @@ header {
     color: #B85C00;
 }
 
-/* =========================
-   STATS
-========================= */
+
+
+
+
 
 .stats {
     display: grid;
@@ -600,9 +645,10 @@ header {
     color: #A8A19A;
 }
 
-/* =========================
-   CONTACT
-========================= */
+
+
+
+
 
 .contact {
     display: grid;
@@ -644,9 +690,10 @@ header {
     transform: translateX(-3px);
 }
 
-/* =========================
-   FORM
-========================= */
+
+
+
+
 
 form {
     display: flex;
@@ -702,9 +749,10 @@ textarea {
     resize: vertical;
 }
 
-/* =========================
-   SEND BUTTON
-========================= */
+
+
+
+
 
 .send-button {
     align-self: flex-start;
@@ -740,9 +788,10 @@ textarea {
         0 10px 25px rgba(255, 122, 0, 0.18);
 }
 
-/* =========================
-   FOOTER
-========================= */
+
+
+
+
 
 footer {
     padding: 28px 7%;
@@ -765,9 +814,10 @@ footer a:hover {
     color: #FF7A00;
 }
 
-/* =========================
-   TABLET
-========================= */
+
+
+
+
 
 @media (max-width: 900px) {
 
@@ -847,9 +897,10 @@ footer a:hover {
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+
+
+
 
 @media (max-width: 550px) {
 
