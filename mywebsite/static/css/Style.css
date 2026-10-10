@@ -256,7 +256,7 @@ header {
 .resume-buttons{
     display: flex;
     gap: 12px;
-    margin: 20px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
@@ -913,13 +913,13 @@ footer a:hover {
         padding: 14px 5%;
     }
 
-    /* Hide logo on mobile */
+    
 
     .logo {
         display: none;
     }
 
-    /* Mobile navigation */
+    
 
     .nav-links {
         display: flex;
@@ -938,7 +938,7 @@ footer a:hover {
         font-size: 12px;
     }
 
-    /* Hide contact button on mobile */
+    
 
     .talk-button {
         display: none;
@@ -973,6 +973,11 @@ footer a:hover {
 
     .button {
         width: auto;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .profile {
