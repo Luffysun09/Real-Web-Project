@@ -7,84 +7,202 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Hossein Khosravian | Full-Stack Developer</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Hossein Khosravian, a beginner full-stack developer building responsive websites and web applications with HTML, CSS, Python and Django."
+    >
+
+    <meta
+        name="author"
+        content="Hossein Khosravian"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="{% static 'images/H.jpg' %}"
+    >
+
+    <meta
+        property="og:title"
+        content="Hossein Khosravian | Developer"
+    >
+
+    <meta
+        property="og:description"
+        content="Portfolio of Hossein Khosravian, a beginner full-stack developer working with HTML, CSS, Python and Django."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="{% static 'images/hossein.jpg' %}"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Hossein Khosravian | Developer"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Portfolio of Hossein Khosravian, a beginner full-stack developer."
+    >
+
+    <meta
+        name="twitter:image"
+        content="{% static 'images/hossein.jpg' %}"
+    >
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Hossein Khosravian",
+            "description": "developer",
+            "image": "{% static 'images/hossein.jpg' %}",
+            "jobTitle": "Web Developer",
+            "sameAs": [
+                "https://instagram.com/hossein_khosravi"
+            ]
+        }
+    }
+    </script>
 
     <link rel="stylesheet" href="{% static 'css/Style.css' %}">
 
 </head>
 
-
 <body>
 
     <header>
 
-        <nav class="navbar">
+        <nav
+            class="navbar"
+            aria-label="Main navigation"
+        >
 
-            <a href="#home" class="logo">
-                HK<span>.</span>
+            <a
+                href="#home"
+                class="logo"
+                aria-label="Hossein Khosravian - Home"
+            >
+                TheHosseinKhosravi<span>.</span>
             </a>
 
             <div class="nav-links">
 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#stats">Stats</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">خانه</a>
+                <a href="#about">درباره من</a>
+                <a href="#skills">مهارت‌ها</a>
+                <a href="#projects">پروژه‌ها</a>
+                <a href="#stats">وضعیت</a>
+                <a href="#contact">تماس</a>
 
             </div>
 
-            <a href="#contact" class="talk-button">
-                Let's Talk
+            <a
+                href="#contact"
+                class="talk-button"
+            >
+            ارتباط
             </a>
 
         </nav>
 
     </header>
 
-
     <main>
 
-        <section id="home" class="home">
+        <section
+            id="home"
+            class="home"
+            aria-labelledby="home-title"
+        >
 
             <div class="home-text">
 
                 <p class="small-title">
-                    BEGINNER FULL-STACK DEVELOPER
+                    توسعه‌دهنده وب
                 </p>
 
-                <h1>
-                    Building
-                    <span>modern</span>
+                <h1 id="home-title">
+                    به وبسایت
+                    <span>من</span>
                     <br>
-                    web experiences.
+                    خوش آمدید.
                 </h1>
 
                 <p class="description">
-                    Hi, I'm Hossein Khosravian.
-                    I create clean and responsive
-                    websites and web applications
-                    with HTML, CSS, Python and Django.
-                </p>
+                سلام، من حسین خسرویان هستم.
+                با استفاده از <b>Python, Django, HTML, CSS</b> وب‌سایت‌های مدرن و کاربردی طراحی می‌کنم.                    
 
+                </p>
 
                 <div class="buttons">
 
-                    <a href="#projects" class="button main-button">
-                        View Projects ↗
+                    <a
+                        href="#projects"
+                        class="button main-button"
+                    >
+                        مشاهده پروژه‌ها ↗
                     </a>
 
-                    <a href="#contact" class="button second-button">
-                        Contact Me
+                    <a
+                        href="#contact"
+                        class="button second-button"
+                    >
+                        ارتباط با من
                     </a>
 
                 </div>
 
-            </div>
+                <div class="resume-buttons">
 
+                    <a
+                        href="{% static 'resume/Hossein-Khosravian-Resume-En.pdf' %}"
+                        target="_blank"
+                        class="resume-button"
+                    >
+                        رزومه انگلیسی ↗
+
+                    </a>
+
+                    <a
+                        href="{% static 'resume/Hossein-Khosravian-FA.pdf' %}"
+                        target="_blank"
+                        class="resume-button"
+                    >
+                        رزومه فارسی ↗
+
+                    </a>
+                    
+                </div>
+
+            </div>
 
             <div class="profile">
 
@@ -98,70 +216,68 @@
                 </div>
 
                 <h2>
-                    Hossein Khosravian
+                    حسین خسرویان 
                 </h2>
 
                 <p>
-                    Full-Stack Developer
+                    طراح‌ وب
                 </p>
 
                 <span>
-                    Available for projects
+                    در دسترس برای پروژه
                 </span>
 
             </div>
 
         </section>
 
-
-        <section id="about" class="section">
+        <section
+            id="about"
+            class="section"
+            aria-labelledby="about-title"
+        >
 
             <p class="small-title">
-                ABOUT ME
+                درباره من
             </p>
 
-            <h2>
-                A little about me.
+            <h2 id="about-title">
+                یکم درباره من.
             </h2>
-
 
             <div class="about">
 
                 <div class="about-main">
 
                     <p>
-                        I'm Hossein, a full-stack developer
-                        who enjoys turning ideas into useful
-                        and beautiful digital products.
+                        من حسینم، طراح سایت مبتدی. در کنار
+                         طراحی‌ وب به هوش مصنوعی هم علاقه دارم.
                     </p>
 
                 </div>
 
-
                 <div class="about-info">
 
                     <p>
-                        I enjoy building simple interfaces,
-                        writing clean code and creating
-                        websites that are easy to use.
+                        از کد زدن و طراحی وبسایت لذت می‌برم.
+                        روزبه‌روز یاد می‌گیرم و ارتقا می‌دم.
                     </p>
-
 
                     <div class="info">
 
                         <p>
-                            <strong>Location</strong>
-                            IRAN, KERMAN
+                            <strong>موقعیت</strong>
+                            ایران، کرمان
                         </p>
 
                         <p>
-                            <strong>Focus</strong>
-                            Web Development
+                            <strong>حوزه فعالیت</strong>
+                              طراحی وبسایت
                         </p>
 
                         <p>
-                            <strong>Learning</strong>
-                            5+ Months
+                            <strong>مدت یادگیری</strong>
+                            بیش از 5 ماه
                         </p>
 
                     </div>
@@ -172,17 +288,19 @@
 
         </section>
 
-
-        <section id="skills" class="section">
+        <section
+            id="skills"
+            class="section"
+            aria-labelledby="skills-title"
+        >
 
             <p class="small-title">
-                SKILLS
+                مهارت‌ها
             </p>
 
-            <h2>
-                What I work with.
+            <h2 id="skills-title">
+                با چه تکنولوژی‌هایی کار می‌کنم؟
             </h2>
-
 
             <div class="skills">
 
@@ -193,12 +311,10 @@
                     <h3>HTML</h3>
 
                     <p>
-                        Creating clean and organized
-                        website structure.
+                        ساخت ساختار تمیز و مرتب.
                     </p>
 
                 </article>
-
 
                 <article class="skill">
 
@@ -207,12 +323,10 @@
                     <h3>CSS</h3>
 
                     <p>
-                        Designing responsive and
-                        modern interfaces.
+                        طراحی رابط کاربری مدرن.
                     </p>
 
                 </article>
-
 
                 <article class="skill">
 
@@ -221,12 +335,10 @@
                     <h3>Python</h3>
 
                     <p>
-                        Building programs and solving
-                        problems with clean code.
+                        ساخت برنامه‌ها و تقویت حل‌ مسئله.
                     </p>
 
                 </article>
-
 
                 <article class="skill">
 
@@ -235,8 +347,7 @@
                     <h3>Django</h3>
 
                     <p>
-                        Creating powerful backend
-                        web applications.
+                        طراحی برنامه‌های قدرتمند.
                     </p>
 
                 </article>
@@ -245,99 +356,107 @@
 
         </section>
 
-
-        <section id="projects" class="section">
+        <section
+            id="projects"
+            class="section"
+            aria-labelledby="projects-title"
+        >
 
             <p class="small-title">
-                PROJECTS
+                پروژه‌ها
             </p>
 
-            <h2>
-                Some of my work.
+            <h2 id="projects-title">
+                  کارهای من.
             </h2>
-
 
             <div class="projects">
 
+            <a href="https://hosseinkhosravian.ir/#" target="_blank">
+
                 <article class="project">
 
-                    <div class="project-image purple">
+                    <div
+                        class="project-image purple"
+                        aria-hidden="true"
+                    >
                         01
                     </div>
 
-
                     <div class="project-text">
 
                         <p class="project-type">
-                            Personal Portfolio
+                            پروژه معرفی خودم
                         </p>
 
                         <h3>
-                            Personal Portfolio Website
+                             وب‌سایت معرفی
                         </h3>
 
                         <p>
-                            A portfolio website built with
-                            HTML, CSS and Django to showcase
-                            my skills and projects.
+                            برای معرفی مهارت‌ها و پروژه‌ها.
                         </p>
 
-                        <a href="#">
-                            View Project ↗
-                        </a>
+                        <span>
+                            برای مشاهده کلیک کنید
+                        </span>
 
                     </div>
 
                 </article>
 
+            </a>
 
                 <article class="project">
 
-                    <div class="project-image orange">
+                    <div
+                        class="project-image orange"
+                        aria-hidden="true"
+                    >
                         02
                     </div>
 
-
                     <div class="project-text">
 
                         <p class="project-type">
-                            COMING UP
+                            به ‌زودی
                         </p>
 
                         <h3>
-                            COMING SOON
+                            به‌زودی
                         </h3>
 
                         <p>
-                            A new web development project
-                            will be added here soon.
+                            یک پروژه جدید
+                             به‌زودی قرار خواهد گرفت.
                         </p>
 
                     </div>
 
                 </article>
 
-
                 <article class="project">
 
-                    <div class="project-image dark">
+                    <div
+                        class="project-image dark"
+                        aria-hidden="true"
+                    >
                         03
                     </div>
-
 
                     <div class="project-text">
 
                         <p class="project-type">
-                            COMING UP
+                            به ‌زودی
                         </p>
 
                         <h3>
-                            COMING SOON
+                            به‌زودی
                         </h3>
 
                         <p>
-                            A new web development project
-                            will be added here soon.
+                         یک پروژه جدید
+                          به‌زودی قرار خواهد گرفت.
                         </p>
 
                     </div>
@@ -348,148 +467,122 @@
 
         </section>
 
-
-        <!-- Stats -->
-        <section id="stats" class="section">
+        <section
+            id="stats"
+            class="section"
+            aria-labelledby="stats-title"
+        >
 
             <p class="small-title">
-                MY STATS
+                وضعیت من
             </p>
 
-            <h2>
-                My progress so far.
+            <h2 id="stats-title">
+                مسیر من تا به اینجا.
             </h2>
-
 
             <div class="stats">
 
                 <div>
-
                     <strong>1</strong>
-
-                    <p>
-                        Project
-                    </p>
-
+                    <p>پروژه</p>
                 </div>
 
-
                 <div>
-
                     <strong>4</strong>
-
-                    <p>
-                        Technologies
-                    </p>
-
+                    <p>تکنولوژی</p>
                 </div>
 
-
                 <div>
-
                     <strong>5+</strong>
-
-                    <p>
-                        Months Learning
-                    </p>
-
+                    <p>ماه یادگیری</p>
                 </div>
 
-
                 <div>
-
                     <strong>100%</strong>
-
-                    <p>
-                        Curiosity
-                    </p>
-
+                    <p>کنجکاوی</p>
                 </div>
 
             </div>
 
         </section>
 
-
-        <section id="contact" class="section contact">
+        <section
+            id="contact"
+            class="section contact"
+            aria-labelledby="contact-title"
+        >
 
             <div class="contact-text">
 
                 <p class="small-title">
-                    CONTACT ME
+                    ارتباط با من
                 </p>
 
-                <h2>
-                    Have a project
-                    in mind?
+                <h2 id="contact-title">
+                    پروژه‌ای داری؟
                 </h2>
-
 
                 <div class="contact-links">
 
-                    <a href="mailto:hossseinkhosravi19@gmail.com">
-                        📧 hossseinkhosravi19@gmail.com
+                    <a href="https://t.me/hossein_khosrevi" target="_blank">
+                        📱 تلگرام
                     </a>
 
-                    <span>
-                        📱 No Phone Number For Now.
-                    </span>
+                    <a href="https://github.com/Luffysun09" target="_blank">
+                        💻 گیت‌هاب
+                    </a>
 
-                    <span>
-                        📸 No Instagram ID
-                    </span>
 
                 </div>
 
             </div>
 
-
-            <form>
+            <form action="https://formspree.io/f/xeaeewao" method="POST">
 
                 <label>
 
-                    Name
+                    نام
 
                     <input
                         type="text"
                         name="name"
                         placeholder="Your name"
+                        autocomplete="name"
+                        required
                     >
 
                 </label>
 
-
                 <label>
 
-                    Email
+                    ایمیل
 
                     <input
                         type="email"
                         name="email"
                         placeholder="Your email"
+                        autocomplete="email"
+                        required
                     >
 
                 </label>
 
-
                 <label>
 
-                    Message
+                    پیام
 
                     <textarea
                         name="message"
                         rows="6"
                         placeholder="Write your message..."
+                        required
                     ></textarea>
 
                 </label>
 
-
-                <button
-                    type="submit"
-                    class="button main-button"
-                >
-                    Send Message ↗
+                <button class="send-button" type="submit">
+                    ارسال پیام ↗
                 </button>
 
             </form>
@@ -498,11 +591,14 @@
 
     </main>
 
-
     <footer>
 
-        <a href="#home" class="logo">
-            HK<span>.</span>
+        <a
+            href="#home"
+            class="logo"
+            aria-label="Back to home"
+        >
+            THEHOSSEINKHOSRAVI<span>.</span>
         </a>
 
         <p>
@@ -510,11 +606,10 @@
         </p>
 
         <a href="#home">
-            Back to top ↑
+            بازگشت به بالا ↑
         </a>
 
     </footer>
-
 
 </body>
 
