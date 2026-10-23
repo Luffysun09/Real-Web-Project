@@ -702,6 +702,14 @@ footer a:hover {
 }
 
 @media (max-width: 550px) {
+
+    .talk-button {
+        display: none !important;
+    }
+
+    .nav-links .mobile-contact {
+        display: inline-block !important;
+    }
     .navbar {
         display: flex;
         flex-direction: column;
@@ -737,22 +745,19 @@ footer a:hover {
         white-space: nowrap;
     }
 
-    .mobile-contact {
-    display: none !important;
-    }
-    
+
     .nav-links .mobile-contact {
         display: inline-block;
         font-size: 13px;
         font-weight: inherit;
-        color: inherit;
+        color: var(--cyan);
         text-decoration: none;
         white-space: nowrap;
         transition: color 0.3s ease;
     }
 
     .nav-links .mobile-contact:hover {
-        color: var(--cyan);
+        color: #FFFFFF;
     }
 
     .home,
