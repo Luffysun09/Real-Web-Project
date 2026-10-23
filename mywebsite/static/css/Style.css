@@ -706,15 +706,6 @@ footer a:hover {
         direction: rtl;
     }
 
-    .logo {
-        grid-column: 2;
-        grid-row: 1;
-        justify-self: end;
-        font-size: 18px;
-        letter-spacing: -0.5px;
-        margin: 0;
-    }
-
     .talk-button {
         grid-column: 1;
         grid-row: 1;
@@ -778,17 +769,19 @@ footer a:hover {
 
     .resume-buttons {
         flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
+        align-items: center;
+        gap: 10px;
     }
 
     .resume-button {
-        width: 100%;
-        min-height: 46px;
+        width: 75%;
+        min-height: 40px;
+        padding: 8px 12px;
         justify-content: center;
         background-color: var(--cyan);
         color: var(--bg);
         border-color: var(--cyan);
+        font-size: 13px;
     }
 
     .resume-button:hover {
@@ -803,6 +796,10 @@ footer a:hover {
 
     .section h2 {
         margin-bottom: 30px;
+    }
+
+    .about {
+        transform: translateY(-30px);
     }
 
     .about-main {
@@ -849,26 +846,3 @@ footer a:hover {
     }
 }
 
-@media (max-width: 550px) {
-    .navbar {
-        display: flex !important;
-        flex-wrap: wrap;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 10px;
-    }
-
-    .logo,
-    .talk-button {
-        align-self: center !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-}
