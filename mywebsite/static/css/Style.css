@@ -695,6 +695,7 @@ footer a:hover {
     }
 }
 
+
 @media (max-width: 550px) {
     .navbar {
         display: flex;
@@ -703,12 +704,25 @@ footer a:hover {
         justify-content: center;
         gap: 12px;
         padding: 12px 5%;
+        width: 100%;
         box-sizing: border-box;
     }
 
-    .logo,
-    .talk-button {
+    .logo {
         display: none !important;
+    }
+
+    .talk-button {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+        width: auto;
+        max-width: 100%;
+        padding: 8px 14px;
+        margin: 0;
+        font-size: 12px;
+        box-sizing: border-box;
     }
 
     .nav-links {
@@ -718,32 +732,35 @@ footer a:hover {
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        gap: 12px 18px;
+        gap: 10px 16px;
         padding: 0;
         margin: 0;
         direction: rtl;
+        box-sizing: border-box;
     }
 
     .nav-links a {
+        display: inline-block;
         font-size: 13px;
         white-space: nowrap;
     }
 
     .home,
     .section {
+        width: 100%;
         padding-left: 5%;
         padding-right: 5%;
         box-sizing: border-box;
     }
 
     .home {
-        min-height: calc(100svh - 55px);
+        min-height: calc(100svh - 90px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding-top: 35px;
-        padding-bottom: 35px;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .home h1 {
@@ -769,21 +786,30 @@ footer a:hover {
     .resume-buttons {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        justify-content: center;
         gap: 12px;
         width: 100%;
         max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
     }
 
     .resume-button {
-        width: 100%;
-        min-height: 46px;
-        padding: 10px 16px;
+        display: flex;
+        align-items: center;
         justify-content: center;
+        width: 100%;
+        max-width: 320px;
+        min-height: 46px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 16px;
+        box-sizing: border-box;
         background-color: var(--cyan);
         color: var(--bg);
         border-color: var(--cyan);
-        box-sizing: border-box;
     }
 
     .resume-button:hover {
@@ -836,6 +862,7 @@ footer a:hover {
         gap: 12px;
     }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
     *,
