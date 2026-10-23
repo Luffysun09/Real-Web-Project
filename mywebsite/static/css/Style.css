@@ -848,3 +848,27 @@ footer a:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+@media (max-width: 550px) {
+    .navbar {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px;
+    }
+
+    .logo,
+    .talk-button {
+        align-self: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
