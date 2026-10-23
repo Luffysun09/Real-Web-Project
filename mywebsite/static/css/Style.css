@@ -1,22 +1,15 @@
-/* =========================
-   1. VARIABLES + RESET
-========================= */
 :root {
     --bg: #050607;
     --bg-secondary: #0A0D10;
     --surface: #0D1115;
     --surface-hover: #11191E;
-
     --cyan: #00E5FF;
     --cyan-soft: rgba(0, 229, 255, 0.12);
     --cyan-glow: rgba(0, 229, 255, 0.18);
-
     --text: #F5F7F8;
     --text-muted: #9BA8B0;
-
     --border: #202B31;
     --border-hover: #00AFC4;
-
     --radius: 12px;
     --transition: 0.3s ease;
 }
@@ -57,9 +50,6 @@ textarea {
     color: var(--bg);
 }
 
-/* =========================
-   2. ANIMATIONS
-========================= */
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -108,14 +98,10 @@ textarea {
     }
 }
 
-/* =========================
-   3. HEADER + NAVBAR
-========================= */
 header {
     position: sticky;
     top: 0;
     z-index: 100;
-
     background: rgba(5, 6, 7, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -126,12 +112,9 @@ header {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
     direction: ltr;
-
     padding: 18px 7%;
-
     background: transparent;
     border-bottom: 1px solid var(--border);
-
     animation: navbar-reveal 0.7s ease both;
 }
 
@@ -139,12 +122,10 @@ header {
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
-
     font-size: 25px;
     font-weight: 800;
     letter-spacing: -1px;
     color: var(--cyan);
-
     transition: color var(--transition), text-shadow var(--transition);
     animation: nav-item-reveal 0.6s ease 0.15s both;
 }
@@ -160,12 +141,10 @@ header {
 .nav-links {
     grid-column: 2;
     grid-row: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-
     direction: rtl;
     gap: 26px;
 }
@@ -173,18 +152,27 @@ header {
 .nav-links a {
     position: relative;
     white-space: nowrap;
-
     color: #FFFFFF;
     font-size: 14px;
-
     transition: color var(--transition);
     animation: nav-item-reveal 0.5s ease both;
 }
 
-.nav-links a:nth-child(1) { animation-delay: 0.20s; }
-.nav-links a:nth-child(2) { animation-delay: 0.30s; }
-.nav-links a:nth-child(3) { animation-delay: 0.40s; }
-.nav-links a:nth-child(4) { animation-delay: 0.50s; }
+.nav-links a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.nav-links a:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.nav-links a:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.nav-links a:nth-child(4) {
+    animation-delay: 0.5s;
+}
 
 .nav-links a:hover {
     color: var(--cyan);
@@ -194,29 +182,18 @@ header {
     grid-column: 1;
     grid-row: 1;
     justify-self: start;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 9px 19px;
-
     background: transparent;
     color: var(--cyan);
-
     border: 1px solid var(--cyan);
     border-radius: 9px;
-
     font-size: 13px;
     font-weight: bold;
     white-space: nowrap;
-
-    transition:
-        background-color var(--transition),
-        color var(--transition),
-        box-shadow var(--transition),
-        transform var(--transition);
-
+    transition: background-color var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
     animation: nav-item-reveal 0.6s ease 0.25s both;
 }
 
@@ -227,28 +204,15 @@ header {
     transform: translateY(-2px);
 }
 
-/* =========================
-   4. HOME / HERO
-========================= */
 .home {
     position: relative;
-
     min-height: 90vh;
     padding: 100px 7%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        radial-gradient(
-            ellipse at 50% 35%,
-            rgba(0, 229, 255, 0.07),
-            transparent 55%
-        );
-
+    background: radial-gradient(ellipse at 50% 35%, rgba(0, 229, 255, 0.07), transparent 55%);
     isolation: isolate;
 }
 
@@ -263,7 +227,6 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 22px;
-
     animation: fade-up 0.7s ease both;
 }
 
@@ -273,7 +236,6 @@ header {
     font-weight: 800;
     line-height: 1.25;
     letter-spacing: -2px;
-
     animation: fade-up 0.8s ease 0.1s both;
 }
 
@@ -284,27 +246,22 @@ header {
 .english-name {
     display: block;
     margin-top: 12px;
-
     color: var(--cyan);
     font-size: clamp(19px, 3vw, 29px);
     font-weight: 500;
     letter-spacing: 1px;
-
     animation: fade-up 0.8s ease 0.2s both;
 }
 
 .home h1::after {
     content: "";
     display: block;
-
     width: 65px;
     height: 2px;
     margin: 24px auto 0;
-
     background: var(--cyan);
     border-radius: 10px;
     box-shadow: 0 0 14px var(--cyan-glow);
-
     animation: line-reveal 0.8s ease 0.35s both;
 }
 
@@ -312,10 +269,8 @@ header {
     color: var(--text-muted);
     max-width: 680px;
     margin: 28px auto;
-
     font-size: 16px;
     line-height: 2;
-
     animation: fade-up 0.8s ease 0.3s both;
 }
 
@@ -323,85 +278,19 @@ header {
     color: var(--text);
 }
 
-/* =========================
-   5. HOME BUTTONS
-========================= */
-.buttons {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 14px;
-    direction: rtl;
-
-    animation: fade-up 0.8s ease 0.4s both;
+.home .buttons {
+    display: none !important;
 }
 
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 46px;
-    padding: 12px 23px;
-
-    border: 1px solid transparent;
-    border-radius: 9px;
-
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-
-    transition:
-        background-color var(--transition),
-        color var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition),
-        transform var(--transition);
-}
-
-.main-button {
-    background-color: var(--cyan);
-    color: var(--bg);
-    border-color: var(--cyan);
-}
-
-.main-button:hover {
-    background-color: transparent;
-    color: var(--cyan);
-    box-shadow: 0 0 22px var(--cyan-glow);
-    transform: translateY(-3px);
-}
-
-.second-button {
-    background-color: transparent;
-    color: var(--text);
-    border-color: var(--border);
-}
-
-.second-button:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
-    transform: translateY(-3px);
-}
-
-/* =========================
-   6. RESUME BUTTONS
-========================= */
 .resume-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
     width: 100%;
     gap: 12px;
     margin-top: 23px;
     direction: rtl;
-
     animation: fade-up 0.8s ease 0.5s both;
 }
 
@@ -409,18 +298,13 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 10px 17px;
-
     background-color: transparent;
     color: var(--text-muted);
-
     border: 1px solid var(--border);
     border-radius: 9px;
-
     font-size: 13px;
     font-weight: bold;
-
     transition: var(--transition);
 }
 
@@ -430,9 +314,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* =========================
-   7. SHARED SECTIONS
-========================= */
 .section {
     padding: 100px 7%;
     border-top: 1px solid var(--border);
@@ -449,9 +330,6 @@ header {
     color: var(--cyan);
 }
 
-/* =========================
-   8. ABOUT
-========================= */
 .about {
     display: flex;
     align-items: flex-start;
@@ -484,9 +362,6 @@ header {
     color: var(--text);
 }
 
-/* =========================
-   9. SKILLS
-========================= */
 .skills {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -495,15 +370,10 @@ header {
 
 .skill {
     padding: 27px;
-
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
-    transition:
-        transform var(--transition),
-        border-color var(--transition),
-        background-color var(--transition);
+    transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
 .skill:hover {
@@ -528,9 +398,6 @@ header {
     font-size: 14px;
 }
 
-/* =========================
-   10. PROJECTS
-========================= */
 .projects {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -547,15 +414,10 @@ header {
 .project {
     height: 100%;
     overflow: hidden;
-
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
-    transition:
-        transform var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .project:hover {
@@ -566,36 +428,19 @@ header {
 
 .project-image {
     height: 210px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 52px;
     font-weight: bold;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 229, 255, 0.13),
-            transparent 65%
-        ),
-        #090D10;
-
+    background: radial-gradient(circle at center, rgba(0, 229, 255, 0.13), transparent 65%), #090D10;
     color: var(--cyan);
     border-bottom: 1px solid var(--border);
 }
 
 .purple,
 .orange {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 229, 255, 0.13),
-            transparent 65%
-        ),
-        #090D10;
-
+    background: radial-gradient(circle at center, rgba(0, 229, 255, 0.13), transparent 65%), #090D10;
     color: var(--cyan);
 }
 
@@ -628,11 +473,9 @@ header {
 .project-text span {
     display: inline-block;
     margin-top: 18px;
-
     color: var(--cyan);
     font-size: 13px;
     font-weight: bold;
-
     transition: var(--transition);
 }
 
@@ -640,15 +483,10 @@ header {
     text-shadow: 0 0 12px var(--cyan-glow);
 }
 
-/* =========================
-   11. STATS
-========================= */
 .stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
     overflow: hidden;
-
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -677,9 +515,6 @@ header {
     color: var(--text-muted);
 }
 
-/* =========================
-   12. CONTACT
-========================= */
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -698,7 +533,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     gap: 12px;
     margin-top: 25px;
 }
@@ -713,9 +547,6 @@ header {
     transform: translateX(-3px);
 }
 
-/* =========================
-   13. CONTACT FORM
-========================= */
 form {
     display: flex;
     flex-direction: column;
@@ -731,19 +562,14 @@ input,
 textarea {
     display: block;
     width: 100%;
-
     margin-top: 7px;
     padding: 13px 14px;
-
     background-color: var(--surface);
     color: var(--text);
-
     border: 1px solid var(--border);
     border-radius: 9px;
-
     font-family: Arial, sans-serif;
     outline: none;
-
     transition: border-color var(--transition), box-shadow var(--transition);
 }
 
@@ -765,22 +591,16 @@ textarea {
 
 .send-button {
     align-self: flex-start;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 11px 21px;
-
     background-color: var(--cyan);
     color: var(--bg);
-
     border: 1px solid var(--cyan);
     border-radius: 9px;
-
     font-weight: bold;
     cursor: pointer;
-
     transition: var(--transition);
 }
 
@@ -791,20 +611,14 @@ textarea {
     transform: translateY(-2px);
 }
 
-/* =========================
-   14. FOOTER
-========================= */
 footer {
     padding: 28px 7%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 18px;
-
     color: var(--text-muted);
     font-size: 13px;
-
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border);
 }
@@ -817,9 +631,6 @@ footer a:hover {
     color: var(--cyan);
 }
 
-/* =========================
-   15. TABLET / SMALL LAPTOP
-========================= */
 @media (max-width: 900px) {
     .navbar {
         padding: 16px 5%;
@@ -883,12 +694,10 @@ footer a:hover {
     }
 }
 
-/* =========================
-   16. MOBILE
-========================= */
 @media (max-width: 550px) {
     .navbar {
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        grid-template-rows: auto auto;
         gap: 10px;
         padding: 13px 5%;
     }
@@ -901,28 +710,25 @@ footer a:hover {
         letter-spacing: -0.5px;
     }
 
+    .talk-button {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
     .nav-links {
         grid-column: 1 / -1;
         grid-row: 2;
-
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-
         gap: 10px 17px;
         padding-top: 8px;
     }
 
     .nav-links a {
-        font-size: 12px;
-    }
-
-    .talk-button {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: start;
-
-        padding: 7px 10px;
         font-size: 12px;
     }
 
@@ -954,13 +760,8 @@ footer a:hover {
         line-height: 2;
     }
 
-    .buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .button {
-        width: 100%;
+    .home .buttons {
+        display: none !important;
     }
 
     .resume-buttons {
@@ -1014,9 +815,6 @@ footer a:hover {
     }
 }
 
-/* =========================
-   17. ACCESSIBILITY
-========================= */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
