@@ -737,6 +737,10 @@ footer a:hover {
         white-space: nowrap;
     }
 
+    .mobile-contact {
+    display: none !important;
+    }
+    
     .nav-links .mobile-contact {
         display: inline-block;
         font-size: 13px;
