@@ -1,3 +1,4 @@
+
 :root {
     --bg: #050607;
     --bg-secondary: #0A0D10;
@@ -55,7 +56,6 @@ textarea {
         opacity: 0;
         transform: translateY(18px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -67,7 +67,6 @@ textarea {
         opacity: 0;
         transform: scaleX(0);
     }
-
     to {
         opacity: 1;
         transform: scaleX(1);
@@ -79,7 +78,6 @@ textarea {
         opacity: 0;
         transform: translateY(-16px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -91,7 +89,6 @@ textarea {
         opacity: 0;
         transform: translateY(-9px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -102,6 +99,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
     background: rgba(5, 6, 7, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -298,19 +296,22 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 44px;
     padding: 10px 17px;
-    background-color: transparent;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
+    background-color: var(--cyan);
+    color: var(--bg);
+    border: 1px solid var(--cyan);
     border-radius: 9px;
     font-size: 13px;
     font-weight: bold;
-    transition: var(--transition);
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .resume-button:hover {
+    background-color: transparent;
     color: var(--cyan);
     border-color: var(--cyan);
+    box-shadow: 0 0 22px var(--cyan-glow);
     transform: translateY(-2px);
 }
 
@@ -696,18 +697,22 @@ footer a:hover {
 
 @media (max-width: 550px) {
     .navbar {
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-rows: auto auto;
-        gap: 10px;
+        align-items: center;
+        gap: 12px;
         padding: 13px 5%;
+        direction: rtl;
     }
 
     .logo {
-        grid-column: 3;
+        grid-column: 2;
         grid-row: 1;
         justify-self: end;
         font-size: 18px;
         letter-spacing: -0.5px;
+        margin: 0;
     }
 
     .talk-button {
@@ -716,20 +721,27 @@ footer a:hover {
         justify-self: start;
         padding: 7px 10px;
         font-size: 12px;
+        margin: 0;
     }
 
     .nav-links {
         grid-column: 1 / -1;
         grid-row: 2;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        width: 100%;
         gap: 10px 17px;
         padding-top: 8px;
+        margin: 0;
+        direction: rtl;
     }
 
     .nav-links a {
         font-size: 12px;
+        white-space: nowrap;
     }
 
     .home,
@@ -767,10 +779,21 @@ footer a:hover {
     .resume-buttons {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
     }
 
     .resume-button {
         width: 100%;
+        min-height: 46px;
+        justify-content: center;
+        background-color: var(--cyan);
+        color: var(--bg);
+        border-color: var(--cyan);
+    }
+
+    .resume-button:hover {
+        background-color: transparent;
+        color: var(--cyan);
     }
 
     .section {
