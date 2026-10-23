@@ -6,6 +6,12 @@ from django.contrib.sitemaps.views import sitemap
 from mywebsite.sitemaps import StaticViewSitemap
 
 
+handler403 = "mywebsite.views.custom_403"
+handler404 = "mywebsite.views.custom_404"
+handler500 = "mywebsite.views.custom_500"
+
+
+
 sitemaps = {
     "static": StaticViewSitemap,
 }
