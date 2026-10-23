@@ -756,6 +756,10 @@ footer a:hover {
         transition: color 0.3s ease;
     }
 
+    .nav-links a.mobile-contact {
+        color: #FFFFFF !important;
+    }
+    
     .nav-links .mobile-contact:hover {
         color: #FFFFFF;
     }
