@@ -840,7 +840,7 @@ footer a:hover {
 }
 
 @media (max-width: 550px) {
-    .about {
-        transform: translateY(-30px);
+    .section.about {
+        transform: translateY(-50px) !important;
     }
 }
