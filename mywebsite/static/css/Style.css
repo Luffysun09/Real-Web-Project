@@ -1,3 +1,6 @@
+/* =========================
+   1. VARIABLES + RESET
+========================= */
 :root {
     --bg: #050607;
     --bg-secondary: #0A0D10;
@@ -54,12 +57,60 @@ textarea {
     color: var(--bg);
 }
 
+/* =========================
+   2. ANIMATIONS
+========================= */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes line-reveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
 
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
 
+@keyframes navbar-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes nav-item-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-9px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   3. HEADER + NAVBAR
+========================= */
 header {
     position: sticky;
     top: 0;
@@ -72,28 +123,30 @@ header {
 
 .navbar {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-
     direction: ltr;
 
     padding: 18px 7%;
 
     background: transparent;
     border-bottom: 1px solid var(--border);
+
+    animation: navbar-reveal 0.7s ease both;
 }
 
 .logo {
     grid-column: 3;
+    grid-row: 1;
     justify-self: end;
 
     font-size: 25px;
     font-weight: 800;
     letter-spacing: -1px;
-
     color: var(--cyan);
 
-    transition: var(--transition);
+    transition: color var(--transition), text-shadow var(--transition);
+    animation: nav-item-reveal 0.6s ease 0.15s both;
 }
 
 .logo:hover {
@@ -106,10 +159,12 @@ header {
 
 .nav-links {
     grid-column: 2;
+    grid-row: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     direction: rtl;
     gap: 26px;
@@ -117,12 +172,19 @@ header {
 
 .nav-links a {
     position: relative;
+    white-space: nowrap;
 
     color: #FFFFFF;
     font-size: 14px;
 
     transition: color var(--transition);
+    animation: nav-item-reveal 0.5s ease both;
 }
+
+.nav-links a:nth-child(1) { animation-delay: 0.20s; }
+.nav-links a:nth-child(2) { animation-delay: 0.30s; }
+.nav-links a:nth-child(3) { animation-delay: 0.40s; }
+.nav-links a:nth-child(4) { animation-delay: 0.50s; }
 
 .nav-links a:hover {
     color: var(--cyan);
@@ -130,6 +192,7 @@ header {
 
 .talk-button {
     grid-column: 1;
+    grid-row: 1;
     justify-self: start;
 
     display: inline-flex;
@@ -146,29 +209,27 @@ header {
 
     font-size: 13px;
     font-weight: bold;
+    white-space: nowrap;
 
     transition:
         background-color var(--transition),
         color var(--transition),
         box-shadow var(--transition),
         transform var(--transition);
+
+    animation: nav-item-reveal 0.6s ease 0.25s both;
 }
 
 .talk-button:hover {
     background-color: var(--cyan);
     color: var(--bg);
-
     box-shadow: 0 0 22px var(--cyan-glow);
     transform: translateY(-2px);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   4. HOME / HERO
+========================= */
 .home {
     position: relative;
 
@@ -198,11 +259,9 @@ header {
 
 .small-title {
     color: var(--cyan);
-
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
-
     margin-bottom: 22px;
 
     animation: fade-up 0.7s ease both;
@@ -210,51 +269,40 @@ header {
 
 .home h1 {
     color: var(--text);
-
     font-size: clamp(42px, 7vw, 82px);
     font-weight: 800;
-
     line-height: 1.25;
     letter-spacing: -2px;
 
     animation: fade-up 0.8s ease 0.1s both;
 }
 
-/* Keep the Persian name white. */
 .home h1 span {
     color: var(--text);
 }
 
-/* Add class="english-name" to the English name in HTML. */
 .english-name {
     display: block;
-
     margin-top: 12px;
 
     color: var(--cyan);
     font-size: clamp(19px, 3vw, 29px);
     font-weight: 500;
-
     letter-spacing: 1px;
 
     animation: fade-up 0.8s ease 0.2s both;
 }
 
-
-
 .home h1::after {
     content: "";
-
     display: block;
 
     width: 65px;
     height: 2px;
-
     margin: 24px auto 0;
 
     background: var(--cyan);
     border-radius: 10px;
-
     box-shadow: 0 0 14px var(--cyan-glow);
 
     animation: line-reveal 0.8s ease 0.35s both;
@@ -262,7 +310,6 @@ header {
 
 .description {
     color: var(--text-muted);
-
     max-width: 680px;
     margin: 28px auto;
 
@@ -276,13 +323,9 @@ header {
     color: var(--text);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   5. HOME BUTTONS
+========================= */
 .buttons {
     width: 100%;
 
@@ -310,7 +353,6 @@ header {
 
     font-size: 14px;
     font-weight: bold;
-
     cursor: pointer;
 
     transition:
@@ -330,7 +372,6 @@ header {
 .main-button:hover {
     background-color: transparent;
     color: var(--cyan);
-
     box-shadow: 0 0 22px var(--cyan-glow);
     transform: translateY(-3px);
 }
@@ -338,25 +379,18 @@ header {
 .second-button {
     background-color: transparent;
     color: var(--text);
-
     border-color: var(--border);
 }
 
 .second-button:hover {
     border-color: var(--cyan);
     color: var(--cyan);
-
     transform: translateY(-3px);
 }
 
-
-
-
-
-
-
-
-
+/* =========================
+   6. RESUME BUTTONS
+========================= */
 .resume-buttons {
     display: flex;
     justify-content: center;
@@ -366,7 +400,6 @@ header {
     width: 100%;
     gap: 12px;
     margin-top: 23px;
-
     direction: rtl;
 
     animation: fade-up 0.8s ease 0.5s both;
@@ -394,29 +427,21 @@ header {
 .resume-button:hover {
     color: var(--cyan);
     border-color: var(--cyan);
-
     transform: translateY(-2px);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   7. SHARED SECTIONS
+========================= */
 .section {
     padding: 100px 7%;
-
     border-top: 1px solid var(--border);
-
     scroll-margin-top: 85px;
 }
 
 .section h2 {
     font-size: clamp(32px, 5vw, 55px);
     line-height: 1.3;
-
     margin-bottom: 40px;
 }
 
@@ -424,23 +449,17 @@ header {
     color: var(--cyan);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   8. ABOUT
+========================= */
 .about {
     display: flex;
     align-items: flex-start;
-
     gap: 70px;
 }
 
 .about-main {
     flex: 1;
-
     color: var(--text);
     font-size: 21px;
 }
@@ -461,21 +480,16 @@ header {
 
 .info strong {
     display: inline-block;
-
     width: 110px;
     color: var(--text);
 }
 
-
-
-
-
-
-
+/* =========================
+   9. SKILLS
+========================= */
 .skills {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
     gap: 16px;
 }
 
@@ -494,7 +508,6 @@ header {
 
 .skill:hover {
     transform: translateY(-5px);
-
     border-color: var(--border-hover);
     background-color: var(--surface-hover);
 }
@@ -515,23 +528,18 @@ header {
     font-size: 14px;
 }
 
-
-
-
-
-
-
+/* =========================
+   10. PROJECTS
+========================= */
 .projects {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     gap: 18px;
 }
 
 .projects > a {
     display: block;
     min-width: 0;
-
     color: inherit;
     text-decoration: none;
 }
@@ -541,7 +549,6 @@ header {
     overflow: hidden;
 
     background-color: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
 
@@ -553,7 +560,6 @@ header {
 
 .project:hover {
     transform: translateY(-5px);
-
     border-color: var(--border-hover);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
@@ -577,13 +583,8 @@ header {
         #090D10;
 
     color: var(--cyan);
-
     border-bottom: 1px solid var(--border);
 }
-
-
-
-
 
 .purple,
 .orange {
@@ -599,9 +600,7 @@ header {
 }
 
 .dark {
-    background:
-        linear-gradient(135deg, #10171B, #050607);
-
+    background: linear-gradient(135deg, #10171B, #050607);
     color: var(--cyan);
 }
 
@@ -611,7 +610,6 @@ header {
 
 .project-type {
     color: var(--cyan);
-
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -629,7 +627,6 @@ header {
 
 .project-text span {
     display: inline-block;
-
     margin-top: 18px;
 
     color: var(--cyan);
@@ -643,13 +640,9 @@ header {
     text-shadow: 0 0 12px var(--cyan-glow);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   11. STATS
+========================= */
 .stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -657,16 +650,13 @@ header {
     overflow: hidden;
 
     background-color: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
 }
 
 .stats div {
     padding: 28px;
-
     text-align: right;
-
     border-left: 1px solid var(--border);
 }
 
@@ -677,7 +667,6 @@ header {
 
 .stats strong {
     display: block;
-
     color: var(--cyan);
     font-size: 39px;
     line-height: 1.3;
@@ -688,17 +677,12 @@ header {
     color: var(--text-muted);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   12. CONTACT
+========================= */
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 70px;
 }
 
@@ -721,10 +705,7 @@ header {
 
 .contact-links a {
     color: var(--cyan);
-
-    transition:
-        color var(--transition),
-        transform var(--transition);
+    transition: color var(--transition), transform var(--transition);
 }
 
 .contact-links a:hover {
@@ -732,17 +713,12 @@ header {
     transform: translateX(-3px);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   13. CONTACT FORM
+========================= */
 form {
     display: flex;
     flex-direction: column;
-
     gap: 15px;
 }
 
@@ -766,12 +742,9 @@ textarea {
     border-radius: 9px;
 
     font-family: Arial, sans-serif;
-
     outline: none;
 
-    transition:
-        border-color var(--transition),
-        box-shadow var(--transition);
+    transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 input::placeholder,
@@ -782,7 +755,6 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
     border-color: var(--cyan);
-
     box-shadow: 0 0 0 3px var(--cyan-soft);
 }
 
@@ -815,25 +787,19 @@ textarea {
 .send-button:hover {
     background-color: transparent;
     color: var(--cyan);
-
     box-shadow: 0 0 20px var(--cyan-glow);
     transform: translateY(-2px);
 }
 
-
-
-
-
-
-
-
+/* =========================
+   14. FOOTER
+========================= */
 footer {
     padding: 28px 7%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 18px;
 
     color: var(--text-muted);
@@ -851,42 +817,10 @@ footer a:hover {
     color: var(--cyan);
 }
 
-
-
-
-
-
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes line-reveal {
-    from {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-
-    to {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-
-
-
-
-
-
+/* =========================
+   15. TABLET / SMALL LAPTOP
+========================= */
 @media (max-width: 900px) {
-
     .navbar {
         padding: 16px 5%;
     }
@@ -897,6 +831,10 @@ footer a:hover {
 
     .nav-links a {
         font-size: 13px;
+    }
+
+    .logo {
+        font-size: 22px;
     }
 
     .talk-button {
@@ -945,28 +883,23 @@ footer a:hover {
     }
 }
 
-
-
-
-
-
-
+/* =========================
+   16. MOBILE
+========================= */
 @media (max-width: 550px) {
-
     .navbar {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 12px;
-
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        gap: 10px;
         padding: 13px 5%;
     }
 
     .logo {
         grid-column: 3;
+        grid-row: 1;
         justify-self: end;
+        font-size: 18px;
+        letter-spacing: -0.5px;
     }
-
-
 
     .nav-links {
         grid-column: 1 / -1;
@@ -974,6 +907,7 @@ footer a:hover {
 
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
 
         gap: 10px 17px;
         padding-top: 8px;
@@ -983,13 +917,13 @@ footer a:hover {
         font-size: 12px;
     }
 
-    .nav-links a::after {
-        bottom: -4px;
-    }
-
     .talk-button {
         grid-column: 1;
+        grid-row: 1;
         justify-self: start;
+
+        padding: 7px 10px;
+        font-size: 12px;
     }
 
     .home,
@@ -1080,13 +1014,10 @@ footer a:hover {
     }
 }
 
-
-
-
-
-
+/* =========================
+   17. ACCESSIBILITY
+========================= */
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
