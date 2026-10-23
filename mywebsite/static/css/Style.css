@@ -839,3 +839,8 @@ footer a:hover {
     }
 }
 
+@media (max-width: 550px) {
+    .about {
+        transform: translateY(-30px);
+    }
+}
